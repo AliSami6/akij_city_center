@@ -1,0 +1,298 @@
+@media (min-width: 1281px) {
+  #header .container-fluid {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  #header .navbar-nav .nav-link {
+    font-size: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #header .container-fluid {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  #header .navbar-nav .nav-link {
+    font-size: 0.95rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #header .navbar-brand img {
+    width: 90px;
+    height: 45px;
+  }
+  #navbarNavDropdown {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  #HeaderMainNav .nav-link {
+    padding: 0.5rem 1rem;
+    color: #333 !important;
+  }
+   .custom-slide-item {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+.counter-item.has-divider::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background: rgba(0, 0, 0, 0.12);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #navbarNavDropdown {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+   .timeline-container {
+    padding: 20px 10px;
+    margin: 20px auto;
+  }
+
+  /* Move Vertical Lines to the Left */
+  .timeline::after,
+  .timeline::before {
+    left: 20px;
+    transform: none;
+  }
+
+  /* Items Take Full Width to the Right */
+  .timeline-item {
+    width: 100% !important;
+    padding-left: 55px !important;
+    padding-right: 10px !important;
+    margin-bottom: 30px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0 !important;
+    text-align: left !important;
+  }
+
+  .timeline-item.left .timeline-header-wrap {
+    flex-direction: row !important;
+  }
+
+  /* Align Dots with Left Line */
+  .timeline-item.left .timeline-dot,
+  .timeline-item.right .timeline-dot {
+    left: 13px !important;
+    right: auto !important;
+  }
+
+  /* Hide Outer Dates on Mobile (Year Tag Inside Card is Used) */
+  .timeline-date {
+    display: none !important;
+  }
+
+  /* Adjust Pointer Arrow for All Left Items */
+  .timeline-item.left .timeline-content::before,
+  .timeline-item.right .timeline-content::before {
+    left: -10px !important;
+    right: auto !important;
+    border-width: 8px 10px 8px 0 !important;
+    border-color: transparent #f0cb5d transparent transparent !important;
+  }
+
+  .timeline-content:hover {
+    transform: none !important; /* Touch screen hover fix */
+  }
+  .custom-slide-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  #header .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  #header .navbar-brand img {
+    width: 85px;
+    height: 42px;
+  }
+  #navbarNavDropdown {
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  #HeaderMainNav .nav-link {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+    color: #333 !important;
+  }
+   .counter-number {
+    font-size: 2.5rem !important;
+  }
+  .counter-label {
+    font-size: 0.775rem;
+  }
+
+   #home h2.text-12 {
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+    word-break: break-word;
+  }
+
+  /* Subtitle (STRENGTH YOU CAN TRUST) */
+  #home h3.text-5 {
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  /* Side Borders of Subtitle */
+  #home h3.text-5 img {
+    height: 10px !important;
+    width: auto !important;
+  }
+
+  /* Description Paragraph */
+  #home p.text-4 {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    padding: 0 10px;
+  }
+
+  /* Navigation Arrows Adjustments */
+  #home .owl-nav button.owl-prev,
+  #home .owl-nav button.owl-next {
+    width: 32px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+  }
+   #home .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    width: 100% !important;
+  }
+
+  #home .col-lg-8 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Main Title Fix */
+  #home h2.text-12 {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    letter-spacing: normal !important;
+    margin-bottom: 10px !important;
+    word-break: normal !important;
+  }
+
+  /* Subtitle Fix */
+  #home h3.text-5 {
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Title Border Images Hide for Mobile */
+  #home h3.text-5 img {
+    display: none !important;
+  }
+
+  /* Description Paragraph Fix */
+  #home p.text-4 {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    padding: 0 5px !important;
+  }
+
+  /* Navigation Arrows */
+  #home .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  #home .owl-nav button.owl-prev,
+  #home .owl-nav button.owl-next {
+    pointer-events: auto;
+    width: 28px !important;
+    height: 28px !important;
+    line-height: 28px !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 50% !important;
+  }
+
+  #home .owl-nav button.owl-prev {
+    left: 5px !important;
+  }
+
+  #home .owl-nav button.owl-next {
+    right: 5px !important;
+  }
+   .custom-img-caption h5 {
+    font-size: 13px !important;
+  }
+  .custom-img-caption p {
+    font-size: 11px !important;
+  }
+
+   .golden-three-circles {
+    width: 120px;
+    height: 120px;
+    box-shadow:
+      0 0 0 20px rgba(212, 160, 23, 0.2),
+      0 0 0 40px rgba(212, 160, 23, 0.08);
+  }
+   .golden-circle-bg {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #header .container-fluid {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  #header .navbar-brand img {
+    width: 75px;
+    height: 38px;
+  }
+  #navbarNavDropdown {
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  #HeaderMainNav .nav-link {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.5rem;
+    color: #333 !important;
+  }
+    #home h2.text-12 {
+    font-size: 22px !important;
+  }
+
+  #home h3.text-5 {
+    font-size: 12px !important;
+  }
+
+  #home p.text-4 {
+    font-size: 12px !important;
+  }
+}
+
