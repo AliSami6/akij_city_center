@@ -3,6 +3,7 @@
   --border-radius: 4px;
   --border-radius2x: 8px;
   --default: #777;
+  --isotop:#1d1d1cc2;
 }
 /* Skin Colors */
 :root {
@@ -13,6 +14,7 @@
   --primary--100: #f1cc52;
   --primary--200: #000;
   --primary--300: #f7d872;
+  --primary--500: #f7b03e;
   --primary-rgba-0: rgba(0, 136, 204, 0);
   --primary-rgba-10: rgba(0, 136, 204, 0.1);
   --primary-rgba-20: rgba(0, 136, 204, 0.2);

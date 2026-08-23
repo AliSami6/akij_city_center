@@ -17317,7 +17317,8 @@ html.boxed .slider-container {
 
 /* Sort Source Style 3 */
 .sort-source.sort-source-style-3 > li > a {
-	color: var(--default);
+	color: var(--isotop);
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .sort-source.sort-source-style-3 > li.active > a {

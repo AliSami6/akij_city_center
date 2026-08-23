@@ -2332,6 +2332,7 @@ h2 em {
 /* Icon Box Animation */
 .icon-box i {
   transition: transform 0.25s ease-in-out;
+  color: var(--text-primary-gold);
 }
 
 .icon-box:hover i {
@@ -3217,6 +3218,9 @@ h2 em {
 .breadcrumb-item + .breadcrumb-item::before {
   color: rgba(255, 255, 255, 0.5);
 }
+.brandsPage i{
+  font-size: 10px;
+}
 
 /* Video Card */
 .video-card {
@@ -3696,7 +3700,8 @@ h2 em {
   content: "";
   position: absolute;
   left: 0;
-  top: 50%;
+  top:12%;
+  left:25%;
   width: 18px;
   height: 2px;
   background-color: #c59d5f;
