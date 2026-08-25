@@ -716,50 +716,7 @@
     <!-- Current Page Views -->
     <script src="assets/js/view.home.js"></script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const timeline = document.querySelector(".timeline");
-
-        // 1. Scroll-driven Middle Line Animation
-        function updateTimelineLine() {
-          if (!timeline) return;
-
-          const rect = timeline.getBoundingClientRect();
-          const drawPoint = window.innerHeight / 1.2;
-          let currentHeight = drawPoint - rect.top;
-
-          if (currentHeight < 0) currentHeight = 0;
-          if (currentHeight > rect.height) currentHeight = rect.height;
-
-          timeline.style.setProperty("--line-height", `${currentHeight}px`);
-        }
-
-        window.addEventListener("scroll", updateTimelineLine);
-        window.addEventListener("resize", updateTimelineLine);
-        updateTimelineLine();
-
-        // 2. Step-by-Step Reveal Observer (Line -> Diamond Dot & Date -> Content Card)
-        const timelineItems = document.querySelectorAll(".timeline-item");
-
-        const observerOptions = {
-          root: null,
-          threshold: 0.25,
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("show");
-              observer.unobserve(entry.target);
-            }
-          });
-        }, observerOptions);
-
-        timelineItems.forEach((item) => {
-          observer.observe(item);
-        });
-      });
-    </script>
+ 
     <!-- Swiper JS CDN -->
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script>
