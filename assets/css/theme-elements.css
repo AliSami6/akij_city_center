@@ -1803,8 +1803,8 @@ Theme Version:	13.1.0
 
 /* Progress */
 .progress {
-	border-radius: 25px;
-	height: 20px;
+	border-radius:15px;
+	height:13px;
 	background: #FAFAFA;
 	overflow: visible;
 }
@@ -1906,7 +1906,7 @@ Theme Version:	13.1.0
 
 /* Progress Bar - Skin */
 .progress-bar-primary {
-	background-color: var(--primary);
+	background-color: var(--about-progress-bar);
 }
 
 .progress-bar-secondary {

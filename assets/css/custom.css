@@ -3675,19 +3675,7 @@ h2 em {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
 }
 
-/* Icon Box Styling */
-.icon-circle {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background-color: #fdf8f0;
-  border: 1px solid #f5e8d3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--dark-primary-gold);
-  font-size: 16px;
-}
+
 
 /* Typography inside Card */
 .card-heading {
@@ -3839,4 +3827,230 @@ h2 em {
   border-color: var(--text-primary-gold, #c59d5f);
   color: #ffffff;
   transform: scale(1.05);
+}
+
+/* 1. Left Side: Accordion/Toggle Styling */
+.toggle-primary.toggle-simple .toggle {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  margin-bottom: 12px !important;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.toggle-primary.toggle-simple .toggle:hover {
+  border-color: var(--primary-gold);
+  box-shadow: 0 4px 12px rgba(193, 155, 83, 0.1);
+}
+
+.toggle-primary.toggle-simple .toggle > a.toggle-titles {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 1.05rem;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.toggle-primary.toggle-simple .toggle-content {
+  padding-left: 54px;
+  color: #64748b;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* Circular Icons Styling */
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-dark-charcoal);
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--home-footer-two-light);
+}
+
+.icon-gold {
+  background: linear-gradient(135deg,var(--primary-gold), var(--color-gold));
+}
+
+.icon-red {
+  background: linear-gradient(135deg, var(--golden-name-badge), var(--gold-primary));
+}
+
+/* 2. Right Side: Progress Bars & Icons */
+.square-icon {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(193, 155, 83, 0.12);
+  color: var(--primary-gold);
+  border-radius: 8px;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+.progress-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  margin-top: 14px;
+}
+
+.progress-label .text-1 {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+/* Premium Slim Progress Bar */
+.progress-bars .progress {
+  height: 8px !important;
+  background-color: #e2e8f0;
+  border-radius: 20px;
+  overflow: visible;
+  position: relative;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.progress-bars .progress-bar-primary {
+  background: linear-gradient(90deg, var(--dark-primary-gold), var(--primary-gold)) !important;
+  border-radius: 20px;
+  position: relative;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tooltip Badge Styling */
+.progress-bar-tooltip {
+  position: absolute;
+  right: 0;
+  top: -28px;
+  background-color: var(--text-dark);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.progress-bar-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px 4px 0;
+  border-style: solid;
+  border-color: var(--text-dark) transparent;
+}
+
+:root {
+  --theme-gold: #c29b38;
+}
+
+.text-gold {
+  color: var(--theme-gold) !important;
+}
+
+/* Prevent Flexbox from Squeezing Icons */
+.feature-icon-wrapper {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  width: 40px;
+  height: 40px;
+}
+
+/* Red Circle Icon Fix */
+.feature-icon-wrapper.icon-circle {
+  width: 38px;
+  height: 38px;
+  font-size: 1.1rem;
+}
+
+/* Icon Box inside Logo */
+.logo-icon-box {
+  font-size: 2.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* Typography & Layout Rules */
+.feature-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+  display: block;
+}
+
+/* Vertical Separator Divider */
+.feature-divider {
+  width: 1px;
+  height: 32px;
+  background-color: #e5e5e5;
+  flex-shrink: 0;
+}
+
+/* Responsive Right Border for Logo Section */
+@media (min-width: 992px) {
+  .border-end-md {
+    border-right: 1px solid #e5e5e5 !important;
+  }
+}
+:root {
+  --theme-gold: #c29b38;
+}
+
+.text-gold {
+  color: var(--theme-gold) !important;
+}
+
+/* Base Card Overflow Fix */
+.floor-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image Container Strict Width/Height Constraint */
+.floor-img-container {
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.floor-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Typography Sizing for 5-Column Grid */
+.floor-title {
+  font-size: 0.725rem;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
+  word-wrap: break-word;
+}
+
+.floor-desc {
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.min-w-0 {
+  min-width: 0;
 }
