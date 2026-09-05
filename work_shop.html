@@ -94,16 +94,14 @@
     data-plugin-scroll-spy
     data-plugin-options="{'target': '#header'}">
     <div class="body">
-          <header id="header" class="header-transparent header-effect-shrink">
+      <header id="header" class="header-transparent header-effect-shrink">
         <nav class="navbar navbar-expand-lg bg-transparent">
           <div class="container px-3 px-lg-5">
             <a class="navbar-brand" href="index.html">
-              <img
-                alt="Akij_group.co"
-             
-                height="90"
-                src="assets/img/logo.png" />
+              <img alt="Akij_group.co" height="90" src="assets/img/logo.png" />
             </a>
+
+            <!-- Open Hamburger Button -->
             <button
               class="navbar-toggler custom-toggler"
               type="button"
@@ -114,9 +112,20 @@
               aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Mobile Dropdown Wrapper with position-relative -->
             <div
-              class="collapse navbar-collapse mt-2 mt-lg-0"
+              class="collapse navbar-collapse mt-2 mt-lg-0 position-relative"
               id="navbarNavDropdown">
+              <!-- Mobile Close Button (Bootstrap Close Button) -->
+              <button
+                type="button"
+                class="btn-close header-close-btn d-lg-none"
+                id="closeMenuBtn"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-label="Close"></button>
+
               <ul
                 class="navbar-nav mx-auto text-start text-lg-center"
                 id="HeaderMainNav">
@@ -156,16 +165,20 @@
                   </a>
                   <ul
                     class="dropdown-menu"
-                    aria-labelledby="navbarDropdownMenuLink">
+                    aria-labelledby="navbarDropdownMenuLinkEvent">
                     <li>
-                      <a class="dropdown-item" href="events.html">Upcoming Event </a>
+                      <a class="dropdown-item" href="events.html"
+                        >Upcoming Event</a
+                      >
                     </li>
-                     <li>
-                      <a class="dropdown-item" href="work_shop.html">Workshop </a>
+                    <li>
+                      <a class="dropdown-item" href="work_shop.html"
+                        >Workshop</a
+                      >
                     </li>
                   </ul>
-                </li>  
-              
+                </li>
+
                 <li class="nav-item">
                   <a class="nav-link" href="mall.html"> Search the Mall </a>
                 </li>
@@ -180,500 +193,701 @@
       </header>
 
       <div role="main" class="main">
-          <!-- Page Header Block -->
+        <!-- Page Header Block -->
         <section
-            class="page-header page-header-modern page-header-background page-header-background-md overlay overlay-color-dark overlay-show overlay-op-7"
-            style="background-image: url(assets/img/about_background.jpg)">
-            <div class="container">
-              <div class="row mt-5">
-                <div
-                  class="col-md-12 align-self-center p-static order-2 text-start">
-                  <h1 class="text-9 font-weight-bold">Our Brands</h1>
-                  <span class="sub-title"
-                    >Building trust through quality and excellence</span
-                  >
-                </div>
-                <div class="col-md-12 align-self-center order-1 text-start">
-                  <ul class="breadcrumb breadcrumb-light d-block ">
-                    <li><a href="#">Home</a></li>
-                    <li class="active">Our Brands</li>
-                  </ul>
-                </div>
+          class="page-header page-header-modern page-header-background page-header-background-md overlay overlay-color-dark overlay-show overlay-op-7"
+          style="background-image: url(assets/img/about_background.jpg)">
+          <div class="container">
+            <div class="row mt-5">
+              <div
+                class="col-md-12 align-self-center p-static order-2 text-start">
+                <h1 class="text-9 font-weight-bold">Our Brands</h1>
+                <span class="sub-title"
+                  >Building trust through quality and excellence</span
+                >
+              </div>
+              <div class="col-md-12 align-self-center order-1 text-start">
+                <ul class="breadcrumb breadcrumb-light d-block">
+                  <li><a href="#">Home</a></li>
+                  <li class="active">Our Brands</li>
+                </ul>
               </div>
             </div>
+          </div>
         </section>
 
-        	<div class="container py-2">
+        <div class="container py-2">
+          <ul
+            class="nav nav-pills sort-source sort-source-style-3"
+            data-sort-id="portfolio"
+            data-option-key="filter"
+            data-plugin-options="{'layoutMode': 'masonry', 'filter': '*'}">
+            <li class="nav-item active" data-option-value="*">
+              <a class="nav-link text-2-5 text-uppercase active" href="#"
+                >Show All</a
+              >
+            </li>
+            <li class="nav-item" data-option-value=".lower_ground">
+              <a class="nav-link text-2-5 text-uppercase" href="#"
+                >Lower Ground Floor</a
+              >
+            </li>
+            <li class="nav-item" data-option-value=".upper_ground">
+              <a class="nav-link text-2-5 text-uppercase" href="#"
+                >Upper Ground Floor</a
+              >
+            </li>
+            <li class="nav-item" data-option-value=".first_floor">
+              <a class="nav-link text-2-5 text-uppercase" href="#">
+                First Floor
+              </a>
+            </li>
+            <li class="nav-item" data-option-value=".second_floor">
+              <a class="nav-link text-2-5 text-uppercase" href="#">
+                Second Floor
+              </a>
+            </li>
+            <li class="nav-item" data-option-value=".third_floor">
+              <a class="nav-link text-2-5 text-uppercase" href="#">
+                Third Floor
+              </a>
+            </li>
+            <li class="nav-item" data-option-value=".department_stores">
+              <a class="nav-link text-2-5 text-uppercase" href="#">
+                Department Stores
+              </a>
+            </li>
+            <li class="nav-item" data-option-value=".foot_fashion">
+              <a class="nav-link text-2-5 text-uppercase" href="#">
+                Foot Fashion
+              </a>
+            </li>
+            <li class="nav-item" data-option-value=".brands">
+              <a class="nav-link text-2-5 text-uppercase" href="#">Brands</a>
+            </li>
+            <li class="nav-item" data-option-value=".fashion">
+              <a class="nav-link text-2-5 text-uppercase" href="#"
+                >Fashion - Men & Women</a
+              >
+            </li>
+            <li class="nav-item" data-option-value=".accessories">
+              <a class="nav-link text-2-5 text-uppercase" href="#"
+                >Accessories</a
+              >
+            </li>
+            <li class="nav-item" data-option-value=".health_and_beauty">
+              <a class="nav-link text-2-5 text-uppercase" href="#"
+                >Health & Beauty</a
+              >
+            </li>
+            <li class="nav-item" data-option-value=".food">
+              <a class="nav-link text-2-5 text-uppercase" href="#"> Food </a>
+            </li>
+          </ul>
 
-            <ul class="nav nav-pills sort-source sort-source-style-3 " data-sort-id="portfolio" data-option-key="filter" data-plugin-options="{'layoutMode': 'masonry', 'filter': '*'}">
-              <li class="nav-item active" data-option-value="*">
-                <a class="nav-link text-2-5 text-uppercase active " href="#">Show All</a>
-              </li>
-              <li class="nav-item" data-option-value=".lower_ground"><a class="nav-link text-2-5 text-uppercase" href="#">Lower Ground Floor</a></li>
-              <li class="nav-item" data-option-value=".upper_ground"><a class="nav-link text-2-5 text-uppercase" href="#">Upper Ground Floor</a></li>
-              <li class="nav-item" data-option-value=".first_floor"><a class="nav-link text-2-5 text-uppercase" href="#"> First Floor </a></li>
-              <li class="nav-item" data-option-value=".second_floor"><a class="nav-link text-2-5 text-uppercase" href="#"> Second Floor </a></li>
-              <li class="nav-item" data-option-value=".third_floor"><a class="nav-link text-2-5 text-uppercase" href="#"> Third Floor </a></li>
-              <li class="nav-item" data-option-value=".department_stores"><a class="nav-link text-2-5 text-uppercase" href="#"> Department Stores </a></li>
-              <li class="nav-item" data-option-value=".foot_fashion"><a class="nav-link text-2-5 text-uppercase" href="#"> Foot Fashion </a></li>
-              <li class="nav-item" data-option-value=".brands"><a class="nav-link text-2-5 text-uppercase" href="#">Brands</a></li>
-              <li class="nav-item" data-option-value=".fashion"><a class="nav-link text-2-5 text-uppercase" href="#">Fashion - Men & Women</a></li>
-              <li class="nav-item" data-option-value=".accessories"><a class="nav-link text-2-5 text-uppercase" href="#">Accessories</a></li>
-              <li class="nav-item" data-option-value=".health_and_beauty"><a class="nav-link text-2-5 text-uppercase" href="#">Health & Beauty</a></li>
-              <li class="nav-item" data-option-value=".food"><a class="nav-link text-2-5 text-uppercase" href="#"> Food </a></li>
-            </ul>
+          <div
+            class="sort-destination-loader sort-destination-loader-showing mt-4 pt-2">
+            <div
+              class="row portfolio-list sort-destination"
+              data-sort-id="portfolio">
+              <div class="col-sm-6 col-lg-3 isotope-item food">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Presentation</span>
+                          <span class="thumb-info-type">Brand</span>
+                        </span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3 isotope-item brands">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Presentation</span>
+                          <span class="thumb-info-type">Brand</span>
+                        </span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3 isotope-item fashion">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Presentation</span>
+                          <span class="thumb-info-type">Brand</span>
+                        </span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
 
-            <div class="sort-destination-loader sort-destination-loader-showing mt-4 pt-2">
-              <div class="row portfolio-list sort-destination" data-sort-id="portfolio">
-                <div class="col-sm-6 col-lg-3 isotope-item food">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Presentation</span>
-                            <span class="thumb-info-type">Brand</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item health_and_beauty">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <span
+                          class="owl-carousel owl-theme dots-inside m-0"
+                          data-plugin-options="{'items': 1, 'margin': 20, 'animateOut': 'fadeOut', 'autoplay': true, 'autoplayTimeout': 3000}"
+                          ><span
+                            ><img
+                              src="assets/img/projects/project-masonry-1.jpg"
+                              class="img-fluid border-radius-0"
+                              alt="" /></span
+                          ><span
+                            ><img
+                              src="assets/img/projects/project-masonry-1-2.jpg"
+                              class="img-fluid border-radius-0"
+                              alt="" /></span
+                        ></span>
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner"> Watch</span>
+                          <span class="thumb-info-type">Media</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
-                <div class="col-sm-6 col-lg-3 isotope-item brands">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Presentation</span>
-                            <span class="thumb-info-type">Brand</span>
-                          </span>
-                        </span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-lg-3 isotope-item fashion">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Presentation</span>
-                            <span class="thumb-info-type">Brand</span>
-                          </span>
-                        </span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item health_and_beauty">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <span class="owl-carousel owl-theme dots-inside m-0" data-plugin-options="{'items': 1, 'margin': 20, 'animateOut': 'fadeOut', 'autoplay': true, 'autoplayTimeout': 3000}"><span><img src="assets/img/projects/project-masonry-1.jpg" class="img-fluid border-radius-0" alt=""></span><span><img src="assets/img/projects/project-masonry-1-2.jpg" class="img-fluid border-radius-0" alt=""></span></span>
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner"> Watch</span>
-                            <span class="thumb-info-type">Media</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item fashion">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <span
+                          class="owl-carousel owl-theme dots-inside m-0"
+                          data-plugin-options="{'items': 1, 'margin': 20, 'animateOut': 'fadeOut', 'autoplay': true, 'autoplayTimeout': 3000}"
+                          ><span
+                            ><img
+                              src="assets/img/projects/project-masonry-1.jpg"
+                              class="img-fluid border-radius-0"
+                              alt="" /></span
+                          ><span
+                            ><img
+                              src="assets/img/projects/project-masonry-1-2.jpg"
+                              class="img-fluid border-radius-0"
+                              alt="" /></span
+                        ></span>
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner"> Watch</span>
+                          <span class="thumb-info-type">Media</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
+              <div class="col-sm-6 col-lg-3 isotope-item food">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <span
+                          class="owl-carousel owl-theme dots-inside m-0"
+                          data-plugin-options="{'items': 1, 'margin': 20, 'animateOut': 'fadeOut', 'autoplay': true, 'autoplayTimeout': 3000}"
+                          ><span
+                            ><img
+                              src="assets/img/projects/project-masonry-1.jpg"
+                              class="img-fluid border-radius-0"
+                              alt="" /></span
+                          ><span
+                            ><img
+                              src="assets/img/projects/project-masonry-1-2.jpg"
+                              class="img-fluid border-radius-0"
+                              alt="" /></span
+                        ></span>
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner"> Watch</span>
+                          <span class="thumb-info-type">Media</span>
+                        </span>
+                      </span>
+                    </span>
+                  </a>
+                </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item fashion">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <span class="owl-carousel owl-theme dots-inside m-0" data-plugin-options="{'items': 1, 'margin': 20, 'animateOut': 'fadeOut', 'autoplay': true, 'autoplayTimeout': 3000}"><span><img src="assets/img/projects/project-masonry-1.jpg" class="img-fluid border-radius-0" alt=""></span><span><img src="assets/img/projects/project-masonry-1-2.jpg" class="img-fluid border-radius-0" alt=""></span></span>
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner"> Watch</span>
-                            <span class="thumb-info-type">Media</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item department_stores">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <span
+                          class="owl-carousel owl-theme dots-inside m-0"
+                          data-plugin-options="{'items': 1, 'margin': 20, 'animateOut': 'fadeOut', 'autoplay': true, 'autoplayTimeout': 3000}"
+                          ><span
+                            ><img
+                              src="assets/img/projects/project-masonry-1.jpg"
+                              class="img-fluid border-radius-0"
+                              alt="" /></span
+                          ><span
+                            ><img
+                              src="assets/img/projects/project-masonry-1-2.jpg"
+                              class="img-fluid border-radius-0"
+                              alt="" /></span
+                        ></span>
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner"> Watch</span>
+                          <span class="thumb-info-type">Media</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
-                <div class="col-sm-6 col-lg-3 isotope-item food">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <span class="owl-carousel owl-theme dots-inside m-0" data-plugin-options="{'items': 1, 'margin': 20, 'animateOut': 'fadeOut', 'autoplay': true, 'autoplayTimeout': 3000}"><span><img src="assets/img/projects/project-masonry-1.jpg" class="img-fluid border-radius-0" alt=""></span><span><img src="assets/img/projects/project-masonry-1-2.jpg" class="img-fluid border-radius-0" alt=""></span></span>
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner"> Watch</span>
-                            <span class="thumb-info-type">Media</span>
-                          </span>
-                        </span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item department_stores">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <span class="owl-carousel owl-theme dots-inside m-0" data-plugin-options="{'items': 1, 'margin': 20, 'animateOut': 'fadeOut', 'autoplay': true, 'autoplayTimeout': 3000}"><span><img src="assets/img/projects/project-masonry-1.jpg" class="img-fluid border-radius-0" alt=""></span><span><img src="assets/img/projects/project-masonry-1-2.jpg" class="img-fluid border-radius-0" alt=""></span></span>
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner"> Watch</span>
-                            <span class="thumb-info-type">Media</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item upper_ground">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-2.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Identity</span>
+                          <span class="thumb-info-type">Logo</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item upper_ground">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-2.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Identity</span>
-                            <span class="thumb-info-type">Logo</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item accessories">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-2.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Identity</span>
+                          <span class="thumb-info-type">Logo</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item accessories">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-2.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Identity</span>
-                            <span class="thumb-info-type">Logo</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item accessories">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-2.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Identity</span>
+                          <span class="thumb-info-type">Logo</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item accessories">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-2.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Identity</span>
-                            <span class="thumb-info-type">Logo</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item lower_ground">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-29.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Porto Screens</span>
+                          <span class="thumb-info-type">Website</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item lower_ground">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-29.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Porto Screens</span>
-                            <span class="thumb-info-type">Website</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item upper_ground">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-5.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Three Bottles</span>
+                          <span class="thumb-info-type">Logo</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item upper_ground">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-5.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Three Bottles</span>
-                            <span class="thumb-info-type">Logo</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item brands">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-6.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Company T-Shirt</span>
+                          <span class="thumb-info-type">Brand</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
-
-                <div class="col-sm-6 col-lg-3 isotope-item brands">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-6.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Company T-Shirt</span>
-                            <span class="thumb-info-type">Brand</span>
-                          </span>
+              </div>
+              <div class="col-sm-6 col-lg-3 isotope-item first_floor">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-6.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Company T-Shirt</span>
+                          <span class="thumb-info-type">Brand</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
-                <div class="col-sm-6 col-lg-3 isotope-item first_floor">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-6.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Company T-Shirt</span>
-                            <span class="thumb-info-type">Brand</span>
-                          </span>
+              </div>
+
+              <div class="col-sm-6 col-lg-3 isotope-item lower_ground">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-7.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Mobile Mockup</span>
+                          <span class="thumb-info-type">Website</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item lower_ground">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-7.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Mobile Mockup</span>
-                            <span class="thumb-info-type">Website</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item second_floor">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-7.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Mobile Mockup</span>
+                          <span class="thumb-info-type">Website</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
-                </div> 
-
-                <div class="col-sm-6 col-lg-3 isotope-item second_floor">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-7.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Mobile Mockup</span>
-                            <span class="thumb-info-type">Website</span>
-                          </span>
-                        </span>
-                      </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item foot_fashion">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-7.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Mobile Mockup</span>
-                            <span class="thumb-info-type">Website</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item foot_fashion">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-7.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Mobile Mockup</span>
+                          <span class="thumb-info-type">Website</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item health_and_beauty">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-24.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Porto Label</span>
-                            <span class="thumb-info-type">Media</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item health_and_beauty">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-24.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Porto Label</span>
+                          <span class="thumb-info-type">Media</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item first_floor">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-24.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Porto Label</span>
-                            <span class="thumb-info-type">Media</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item first_floor">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-24.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Porto Label</span>
+                          <span class="thumb-info-type">Media</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item department_stores">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-24.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Porto Label</span>
-                            <span class="thumb-info-type">Media</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item department_stores">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-24.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Porto Label</span>
+                          <span class="thumb-info-type">Media</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-
-                <div class="col-sm-6 col-lg-3 isotope-item foot_fashion">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-24.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Porto Label</span>
-                            <span class="thumb-info-type">Media</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item foot_fashion">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-24.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Porto Label</span>
+                          <span class="thumb-info-type">Media</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item upper_ground">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-25.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Business Folders</span>
-                            <span class="thumb-info-type">Logo</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item upper_ground">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-25.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Business Folders</span>
+                          <span class="thumb-info-type">Logo</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item second_floor">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-25.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Business Folders</span>
-                            <span class="thumb-info-type">Logo</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item second_floor">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-25.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Business Folders</span>
+                          <span class="thumb-info-type">Logo</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item third_floor">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-25.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Business Folders</span>
-                            <span class="thumb-info-type">Logo</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item third_floor">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-25.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Business Folders</span>
+                          <span class="thumb-info-type">Logo</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item first_floor">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-25.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Business Folders</span>
-                            <span class="thumb-info-type">Logo</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item first_floor">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-25.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Business Folders</span>
+                          <span class="thumb-info-type">Logo</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item lower_ground">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-26.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Tablet Screen</span>
-                            <span class="thumb-info-type">Website</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item lower_ground">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-26.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Tablet Screen</span>
+                          <span class="thumb-info-type">Website</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
-                 
-                <div class="col-sm-6 col-lg-3 isotope-item third_floor">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-26.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Tablet Screen</span>
-                            <span class="thumb-info-type">Website</span>
-                          </span>
+              </div>
+
+              <div class="col-sm-6 col-lg-3 isotope-item third_floor">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-26.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Tablet Screen</span>
+                          <span class="thumb-info-type">Website</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
+              </div>
 
-                <div class="col-sm-6 col-lg-3 isotope-item department_stores">
-                  <div class="portfolio-item">
-                    <a href="portfolio-single-wide-slider.html">
-                      <span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
-                        <span class="thumb-info-wrapper border-radius-0">
-                          <img src="assets/img/projects/project-masonry-26.jpg" class="img-fluid border-radius-0" alt="">
-                          <span class="thumb-info-title">
-                            <span class="thumb-info-inner">Tablet Screen</span>
-                            <span class="thumb-info-type">Website</span>
-                          </span>
+              <div class="col-sm-6 col-lg-3 isotope-item department_stores">
+                <div class="portfolio-item">
+                  <a href="portfolio-single-wide-slider.html">
+                    <span
+                      class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0">
+                      <span class="thumb-info-wrapper border-radius-0">
+                        <img
+                          src="assets/img/projects/project-masonry-26.jpg"
+                          class="img-fluid border-radius-0"
+                          alt="" />
+                        <span class="thumb-info-title">
+                          <span class="thumb-info-inner">Tablet Screen</span>
+                          <span class="thumb-info-type">Website</span>
                         </span>
                       </span>
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 </div>
-
               </div>
             </div>
-
-				  </div>
+          </div>
+        </div>
       </div>
       <footer
         id="footer"
@@ -682,7 +896,7 @@
           <!-- Main Footer Content -->
           <div class="row footer-main-row g-4">
             <!-- Brand Column -->
-            <div class="col-lg-4 col-md-12 footer-brand-column">
+            <div class="col-12 col-md-3 col-lg-4 footer-brand-column">
               <div class="footer-brand d-flex align-items-center gap-2 mb-3">
                 <img
                   src="assets/img/logo.png"
@@ -694,50 +908,41 @@
                 </h2>
               </div>
 
-              <p class="footer-description text-muted small mb-2">
+              <p class="footer-description text-muted mb-0">
                 Mr. Akij Uddin, born in 1929 in Khulna, Bangladesh, began as a
                 fruit vendor in 1950 and rose to become a pioneering
                 entrepreneur. Through vision and leadership, he built Akij
-                Group.
-              </p>
-
-              <p class="footer-description text-muted small">
-                He passed away in 2006, leaving behind a lasting legacy of
-                innovation and enterprise.
+                Group. He passed away in 2006, leaving behind a lasting legacy
+                of innovation and enterprise.
               </p>
             </div>
 
-            <!-- Useful Links -->
+            <!-- Useful Links & Top Brands Container (Side by Side in Mobile) -->
             <div class="col-6 col-md-3 col-lg-2 footer-links-column">
               <h5 class="footer-heading fs-6 fw-bold mb-3 text-uppercase">
                 Useful Links
               </h5>
-              <ul
-                class="footer-menu-links list-unstyled small d-flex flex-column gap-2">
+              <ul class="footer-menu-links list-unstyled d-flex flex-column">
                 <li>
-                  <a href="index-2.html" class="text-decoration-none text-muted"
+                  <a
+                    href="about-us.html"
+                    class="text-decoration-none text-muted"
                     >About Us</a
                   >
                 </li>
                 <li>
-                  <a href="about-2.html" class="text-decoration-none text-muted"
+                  <a href="brands.html" class="text-decoration-none text-muted"
                     >Brands</a
                   >
                 </li>
                 <li>
-                  <a href="brand-2.html" class="text-decoration-none text-muted"
-                    >News & Media</a
-                  >
+                  <a href="events.html" class="text-decoration-none text-muted">
+                    Events
+                  </a>
                 </li>
+
                 <li>
-                  <a href="career.html" class="text-decoration-none text-muted"
-                    >Careers</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="contact-2.html"
-                    class="text-decoration-none text-muted"
+                  <a href="contact.html" class="text-decoration-none text-muted"
                     >Contact Us</a
                   >
                 </li>
@@ -759,8 +964,7 @@
               <h5 class="footer-heading fs-6 fw-bold mb-3 text-uppercase">
                 Top Brands
               </h5>
-              <ul
-                class="footer-menu-links list-unstyled small d-flex flex-column gap-2">
+              <ul class="footer-menu-links list-unstyled d-flex flex-column">
                 <li>
                   <a
                     href="https://www.akijjute.com/"
@@ -807,12 +1011,12 @@
             </div>
 
             <!-- Contact Info -->
-            <div class="col-lg-4 col-md-6 footer-contact-column">
+            <div class="col-12 col-md-3 col-lg-4 footer-contact-column">
               <h5 class="footer-heading fs-6 fw-bold mb-3 text-uppercase">
                 Contact Info
               </h5>
               <ul
-                class="footer-contact-info list-unstyled small text-muted d-flex flex-column gap-2 mb-0">
+                class="footer-contact-info list-unstyled text-muted d-flex flex-column gap-2 mb-0">
                 <li>
                   <strong class="text-white d-block">Head Office:</strong>
                   Akij House, 198 Bir Uttam Mir Shawkat Sarak, Tejgaon,
@@ -845,14 +1049,13 @@
 
         <!-- Bottom Bar: Social, Newsletter & Copyright -->
         <div class="footer-wrapper text-white">
-          <!-- Top Dark Bar: Social & Offers/Updates -->
-          <div class="footer-top-bar py-4 px-3 px-md-5">
+          <div class="footer-top-bar py-4 px-2 px-md-2">
             <div class="container">
-              <div class="row align-items-center g-3">
+              <div class="row align-items-center g-2">
                 <!-- Social Networks -->
                 <div
-                  class="col-12 col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-start gap-3">
-                  <span class="fw-bold fs-6 me-2 text-nowrap"
+                  class="col-12 col-sm-6 col-md-6 col-lg-6 d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-lg-start gap-3 text-center text-sm-start">
+                  <span class="fw-bold fs-6 text-nowrap"
                     >Follow Us On Social Networks</span
                   >
                   <div class="social-icons-group d-flex gap-2">
@@ -871,16 +1074,16 @@
                   </div>
                 </div>
 
-                
+                <!-- Deals & Offers Subscription -->
                 <div
-                  class="col-12 col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-end gap-3">
-                  <span class="fw-bold fs-6 lh-sm text-center text-lg-start">
-                    Get Exclusive Offers & 
+                  class="col-12 col-sm-6 col-md-6 col-lg-6 d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-lg-end gap-3 text-center text-sm-start">
+                  <span class="fw-bold fs-6 lh-sm">
+                    Get Exclusive Offers &<br class="d-none d-sm-inline" />
                     Event Updates
                   </span>
                   <form class="newsletter-form d-flex">
                     <input
-                      type="email" 
+                      type="email"
                       class="form-control newsletter-input"
                       placeholder="Enter Your Email"
                       required />

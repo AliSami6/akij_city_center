@@ -4,55 +4,68 @@ Written by:
 Theme Version:	1.1
 */
 
-(($ => {
-    /*
+(($) => {
+  /*
 	Circle Slider
 	*/
-    if ($.isFunction($.fn.flipshow)) {
-		const circleContainer = $('.fc-slideshow');
-	
-		$.each( circleContainer, function() {
-				
-			const $container = $(this);
-				
-			$container.flipshow();
+  if ($.isFunction($.fn.flipshow)) {
+    const circleContainer = $(".fc-slideshow");
 
-			setTimeout(function circleFlip() {
-				$container.data().flipshow._navigate($container.find('div.fc-right span:first'), 'right');
-				setTimeout(circleFlip, 3000);
-			}, 3000);
-			
-		});
-	}
+    $.each(circleContainer, function () {
+      const $container = $(this);
 
-    /*
+      $container.flipshow();
+
+      setTimeout(function circleFlip() {
+        $container
+          .data()
+          .flipshow._navigate(
+            $container.find("div.fc-right span:first"),
+            "right",
+          );
+        setTimeout(circleFlip, 3000);
+      }, 3000);
+    });
+  }
+
+  /*
 	Move Cloud
 	*/
-    if ($('.cloud').get(0)) {
-		const moveCloud = () => {
-			$('.cloud').animate({
-				'top': '+=20px'
-			}, 3000, 'linear', () => {
-				$('.cloud').animate({
-					'top': '-=20px'
-				}, 3000, 'linear', () => {
-					moveCloud();
-				});
-			});
-		};
+  if ($(".cloud").get(0)) {
+    const moveCloud = () => {
+      $(".cloud").animate(
+        {
+          top: "+=20px",
+        },
+        3000,
+        "linear",
+        () => {
+          $(".cloud").animate(
+            {
+              top: "-=20px",
+            },
+            3000,
+            "linear",
+            () => {
+              moveCloud();
+            },
+          );
+        },
+      );
+    };
 
-		moveCloud();
-	}
-})).apply(this, [jQuery]);
+    moveCloud();
+  }
+}).apply(this, [jQuery]);
 
- window.addEventListener("scroll", function () {
-   const header = document.getElementById("header");
-   if (window.scrollY > 50) {
-     header.classList.add("header-scrolled");
-   } else {
-     header.classList.remove("header-scrolled");
-   }
- });
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("header");
+  if (window.scrollY > 50) {
+    header.classList.add("header-scrolled");
+  } else {
+    header.classList.remove("header-scrolled");
+  }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   /* =========================================
@@ -127,157 +140,52 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
-  
 });
 
-/* =========================================
-   5. DROPDOWN - DESKTOP + MOBILE
-========================================= */
+document.addEventListener("DOMContentLoaded", function () {
+  const menuCollapse = document.getElementById("navbarNavDropdown");
+  const overlay = document.querySelector(".sidebar-overlay");
+  const closeBtn = document.querySelector(".sidebar-close-btn");
 
-const dropdownToggles = document.querySelectorAll(
-  "#HeaderMainNav .dropdown-toggle"
-);
+  if (!menuCollapse) return;
 
-dropdownToggles.forEach(function (toggle) {
-
-  toggle.addEventListener("click", function (e) {
-
-    e.preventDefault();
-    e.stopPropagation();
-
-    const parentDropdown = this.closest(".dropdown");
-
-    if (!parentDropdown) return;
-
-    const dropdownMenu =
-      parentDropdown.querySelector(".dropdown-menu");
-
-    /* =========================================
-       CLOSE OTHER DROPDOWNS
-    ========================================= */
-
-    document
-      .querySelectorAll("#HeaderMainNav .dropdown")
-      .forEach(function (dropdown) {
-
-        if (dropdown !== parentDropdown) {
-
-          dropdown.classList.remove("show");
-
-          const otherMenu =
-            dropdown.querySelector(".dropdown-menu");
-
-          if (otherMenu) {
-            otherMenu.classList.remove("show");
-          }
-
-          const otherToggle =
-            dropdown.querySelector(".dropdown-toggle");
-
-          if (otherToggle) {
-            otherToggle.setAttribute(
-              "aria-expanded",
-              "false"
-            );
-          }
-
-        }
-
-      });
-
-    /* =========================================
-       TOGGLE CURRENT DROPDOWN
-    ========================================= */
-
-    parentDropdown.classList.toggle("show");
-
-    if (dropdownMenu) {
-      dropdownMenu.classList.toggle("show");
-
-      const isOpen =
-        dropdownMenu.classList.contains("show");
-
-      this.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-      );
-    }
-
+  // Initialize Bootstrap Collapse instance
+  const bsCollapse = new bootstrap.Collapse(menuCollapse, {
+    toggle: false,
   });
 
-});
+  // Toggle overlay active state when menu slides in/out
+  menuCollapse.addEventListener("show.bs.collapse", function () {
+    if (overlay) overlay.classList.add("active");
+  });
 
+  menuCollapse.addEventListener("hide.bs.collapse", function () {
+    if (overlay) overlay.classList.remove("active");
+  });
 
-/* =========================================
-   6. CLICK OUTSIDE = CLOSE DROPDOWN
-========================================= */
-
-document.addEventListener("click", function (e) {
-
-  if (!e.target.closest("#HeaderMainNav .dropdown")) {
-
-    document
-      .querySelectorAll("#HeaderMainNav .dropdown")
-      .forEach(function (dropdown) {
-
-        dropdown.classList.remove("show");
-
-        const menu =
-          dropdown.querySelector(".dropdown-menu");
-
-        if (menu) {
-          menu.classList.remove("show");
-        }
-
-        const toggle =
-          dropdown.querySelector(".dropdown-toggle");
-
-        if (toggle) {
-          toggle.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-        }
-
-      });
-
+  // Explicit Close Actions
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      bsCollapse.hide();
+    });
   }
 
-});
-
-
-/* =========================================
-   7. WINDOW RESIZE
-========================================= */
-
-window.addEventListener("resize", function () {
-
-  document
-    .querySelectorAll("#HeaderMainNav .dropdown")
-    .forEach(function (dropdown) {
-
-      dropdown.classList.remove("show");
-
-      const menu =
-        dropdown.querySelector(".dropdown-menu");
-
-      if (menu) {
-        menu.classList.remove("show");
-      }
-
-      const toggle =
-        dropdown.querySelector(".dropdown-toggle");
-
-      if (toggle) {
-        toggle.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-      }
-
+  if (overlay) {
+    overlay.addEventListener("click", function () {
+      bsCollapse.hide();
     });
-
+  }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const closeBtn = document.getElementById("closeMenuBtn");
+  const navDropdown = document.getElementById("navbarNavDropdown");
 
-
+  if (closeBtn && navDropdown) {
+    closeBtn.addEventListener("click", function () {
+      const bsCollapse =
+        bootstrap.Collapse.getInstance(navDropdown) ||
+        new bootstrap.Collapse(navDropdown);
+      bsCollapse.hide();
+    });
+  }
+});
